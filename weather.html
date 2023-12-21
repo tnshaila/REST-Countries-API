@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="weather.css">
+
+</head>
+<body>
+    <section class="search-bar">
+        <form >
+            <input type="text" placeholder="Search City" id="sCity">
+            <button type="button" ><img src="Photos/search.webp" alt="Search" onclick="getDataOnClick()" ></button>
+        </form>
+    </section>
+
+    <div class="title">
+        <h1>5 Days Weather Forecast</h1><br><br><br>
+    </div>
+    <section class="main-Weather" id="updateWeather">
+        <div class="top">
+            <div class="left">
+                <img src="http://openweathermap.org/img/wn/10d@2x.png"id="img1" alt="" >
+            </div>
+            <div class="center" >
+                <h5 class="city" > </h5>
+                <h5 class="city"  id="weekn1"></h5>
+            </div>
+            <div class="right">
+                <div><h5><span id="addDate"></span><br><span id="addTime"></span></h5></div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="left">
+                <h5 class="weather-status" ><span id="day1weather"></span></h5><br>
+            </div>
+            
+            <div class="center" >
+                <h5 class="degree" id="day1"> &#176;C</h5>
+
+            </div>
+            <div class="right">
+                <div class="div"><h5> Feels like: <span id="d1feels_like"> </span></h5></div>
+                <br>
+                <div class="div"><h5> Humidity: <span id="d1humidity"> </span></h5></div>
+                <br>
+                <div class="div"><h5> Wind Speed: <span id="d1wind-speed"> </span></h5></div>
+                <br>
+                <div class="div"><h5> Pressure: <span id="d1pressure"> </span> </h5></div>
+            </div>
+        </div>
+    </section>
+    <section >
+        <div class="future-forecast">
+            <div class="weather-forecast" id="weather-forecast">
+                <div class="weather-forecast-item">
+                    <div class="day" id="weekn2">Tue</div>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" id="img2"alt="weather icon" class="w-icon">
+                    <div class="temp" id="day2weather"></div>
+                    <div class="temp" id="day2">&#176; C</div>
+                    <div class="temp"> <h5> Pressure :  <br><span id="d2pressure"> </span> </h5></div>
+                    <div class="temp"> <h5> Wind Speed: <br><span id="d2wind-speed"> </span> </h5></div>
+                </div>
+                <div class="weather-forecast-item">
+                    <div class="day" id="weekn3">Wed</div>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png"id="img3" alt="weather icon" class="w-icon">
+                    <div class="temp" id="day3weather"></div>
+                    <div class="temp" id="day3">&#176; C</div>
+                    <div class="temp"> <h5> Pressure : <br><span id="d3pressure"> </span> </h5></div>
+                    <div class="temp"> <h5> Wind Speed: <br><span id="d3wind-speed"> </span> </h5></div>
+                </div>
+                <div class="weather-forecast-item">
+                    <div class="day" id="weekn4">Thur</div>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png"id="img4" alt="weather icon" class="w-icon">
+                    <div class="temp"id="day4weather"></div>
+                    <div class="temp" id="day4">&#176; C</div>
+                    <div class="temp"> <h5> Pressure : <br><span id="d4pressure"> </span> </h5></div>
+                    <div class="temp"> <h5> Wind Speed: <br><span id="d4wind-speed"> </span> </h5></div>
+                </div>
+                <div class="weather-forecast-item">
+                    <div class="day" id="weekn5">Fri</div>
+                    <img src="http://openweathermap.org/img/wn/10d@2x.png" id="img5" alt="weather icon" class="w-icon">
+                    <div class="temp"id="day5weather"></div>
+                    <div class="temp" id="day5">&#176; C</div>
+                    <div class="temp"> <h5> Pressure : <br><span id="d5pressure"> </span> </h5></div>
+                    <div class="temp"> <h5> Wind Speed: <br><span id="d5wind-speed"> </span> </h5></div>
+                </div> 
+            </div>
+        </div>
+    </section>
+
+
+        <script src="weather.js"></script>
+</body>
+</html>

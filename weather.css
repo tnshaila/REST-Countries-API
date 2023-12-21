@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@300&display=swap');
+*{
+    margin:0;
+    margin-bottom: 10;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+html {
+    box-sizing: border-box;
+    background-image: url(Photos/weatherbg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:auto;
+}
+
+.search-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh;
+
+    
+}
+.search-bar form{
+    width: 500px;
+    height: 6.5vh;
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+}
+.search-bar input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 10px 10px;
+    font-size: 20px;
+    color: #ffffff;
+
+}
+::placeholder{
+    color: rgb(23, 10, 58);
+}
+.search-bar form button {
+    border: 0;
+    border-radius: 50%;
+    width: 40px;
+    background: rgb(28, 2, 77);
+    opacity: 0.5;
+    cursor: pointer;
+}
+.search-bar form button img{
+    position:relative;
+    width: 30px;
+}
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.main-Weather {
+    display: grid;
+    grid-template-columns: 1fr 1
+    fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px; 
+    margin: 0vh 10vw 0vh 10vw;
+    width: auto;
+    border-radius: 40px;
+    background: rgba(299, 299, 299, .4);
+    color: rgb(33, 31, 31);
+    padding-bottom: 20px;
+
+  }
+  
+  .top {
+    margin-top: 3vh;
+    margin-right: 3vh;
+    grid-column: 1 / span 3; 
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; 
+    gap: 10px; 
+  }
+  
+  .bottom {
+    margin-right: 3vh;
+    grid-column: 1 / span 3; 
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; 
+    gap: 10px; 
+
+  }
+
+  .main-Weather .left {
+    font-size: 40px;
+    text-shadow:  1px 1px 5px #707070;
+    text-align: center;
+    
+  }
+
+  .main-Weather .top .left img{
+    width: 10vw;
+  }
+.main-Weather .center {
+    align-items: center;
+    text-align: center;
+} 
+.main-Weather .city{
+    font-size: 40px;
+}
+.main-Weather .degree
+{
+    font-size: 65px;
+}
+
+  .main-Weather .right {
+    text-shadow:  1px 1px 5px #707070;
+    text-align: center;
+    justify-content: center;
+    line-height: 100%;
+    font-size: 40px;
+    text-shadow:  1px 1px 5px #707070;
+    line-height: 100%;
+  }
+  
+.weather-forecast-item .img{
+    width: 3.5vw;
+    height: auto;
+}
+.future-forecast{
+    padding: 25px;
+    position: relative;
+    bottom: 0;
+    display: flex;
+    color:white;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
+.future-forecast .weather-forecast{
+    display: flex;
+    padding: 20px;
+    text-align: center;
+}
+
+.weather-forecast .weather-forecast-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background: rgba(299, 299, 299, .4);
+    width: 18vw;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+.weather-forecast .weather-forecast-item .day{
+    padding: 5px 15px;
+    background: #6b1a01;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.weather-forecast .weather-forecast-item .temp{
+    font-weight: 100;
+    font-size: 20px;
+    padding-top: 5px;
+    color: black;
+}
+
+
+
+@media screen and (max-width: 1100px)
+{
+    html {
+        background-image: url(Photos/weatherbg.jpg);
+    }
+
+    .main-Weather .left {
+        font-size: 30px;
+      }
+    
+    .main-Weather .top .left img{
+        width: 10vw;
+      }
+    .main-Weather .city{
+        font-size: 30px;
+    }
+    .main-Weather .degree
+    {
+        font-size: 50px;
+    }
+    
+    .main-Weather .right {
+        font-size: 30px;
+      }
+
+       .future-forecast{
+            justify-content: start;
+            align-items: center;
+            overflow-x: scroll;
+            text-align: center;
+        }
+    
+        .future-forecast .today .temp{
+            font-size: 16px;
+        }
+        .weather-forecast .weather-forecast-item
+        {
+            width: 40vw;
+            padding-bottom: 10px;
+        }
+        .weather-forecast .weather-forecast-item
+        {    
+        width: 30vw;
+        }
+    }
+
+@media screen and (max-width: 450px)
+{
+    html {
+        background-image: url(Photos/weatherbg.jpg);
+    }
+    .main-Weather .left {
+        font-size: 20px;
+      }
+    
+    .main-Weather .top .left img{
+        width: 10vw;
+      }
+    .main-Weather .city{
+        font-size: 15px;
+    }
+    .main-Weather .degree
+    {
+        font-size: 30px;
+    }
+    
+    .main-Weather .top .left img{
+        width: 10vw;
+      }
+    .main-Weather .city{
+        font-size: 20px;
+    }
+    .main-Weather .degree
+    {
+        font-size: 30px;
+    }
+    .main-Weather .right {
+        font-size: 20px;
+      }
+}
+
