@@ -6,15 +6,15 @@
     <title>API</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-   <script src="script.js"></script> 
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-<!-- Navbar -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+  <!-- nav -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">REST Countries</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -24,31 +24,98 @@
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">Weather Info</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
+
           <li class="nav-item">
-            <!-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
-          </li>
         </ul>
         <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <input class="form-control me-2 search" type="search" placeholder="Search For Country" aria-label="Search">
+          <button class="main-btn" type="submit">Search</button>
+          <!-- <i class="fas fa-search">Search</i> -->
         </form>
+        
       </div>
+</div>
+</nav>
+<div class="container">
+  <div class="dropDownCon">
+    <div class="dropDown">
+            <p>Filter By Region</p>
+            <button><i class="fas fa-chevron-down"></i></button>
+        </div>
+        <div class="drop showDropDown">
+            <p class="region">All</p>
+            <p class="region">Africa</p>
+            <p class="region">America</p>
+            <p class="region">Asia</p>
+            <p class="region">Europe</p>
+            <p class="region">Oceania</p>
+        </div>
+      </div>
+      
     </div>
-  </nav>
+<div class="countries"></div>
+    <div class="countryModal show">
+      <!-- <a href="index.html">
+        <button class="back">Back</button>
+      </a> -->
+      <button class="back">Back</button>
+      <div class="modal">
+        <div class="leftModal">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg" alt="">
+        </div>
+        <div class="rightModal">
+          <h1>Germany</h1>
+          <div class="modalInfo">
+            <div class="innerLeft">
+              <p><strong>Native Name: </strong>${data.population}</p>
+              <p ><strong>Population: </strong>${data.region}</p>
+              <p><strong>Region: </strong>${data.capital}</p>
+              <p><strong>Sub-Region: </strong>${data.capital}</p>
+            </div>
+  
+            <div class="innerRight">
+              <p><strong>Top Level Domain: </strong>${data.population}</p>
+              <p><strong>Currencies: </strong>${data.region}</p>
+              <p><strong>Languages: </strong>${data.capital}</p>
+              <p><strong>Capital: </strong>${data.capital}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+<!-- footer  -->
+<footer class="footer">
+
+  <ul class="social-icon">
+    <li class="social-icon__item"><a class="social-icon__link" href="#">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </a></li>
+    <li class="social-icon__item"><a class="social-icon__link" href="#">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </a></li>
+    <li class="social-icon__item"><a class="social-icon__link" href="#">
+        <ion-icon name="logo-linkedin"></ion-icon>
+      </a></li>
+    <li class="social-icon__item"><a class="social-icon__link" href="#">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </a></li>
+  </ul>
+  <ul class="menu">
+    <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+    <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+    <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+    <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+
+  </ul>
+  <p>&copy;2023 Tanzina Naznin Shaila | All Rights Reserved</p>
+</footer>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 
+<script src="script.js"></script> 
 </body>
 </html>
